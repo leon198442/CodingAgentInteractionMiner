@@ -1,0 +1,11 @@
+{
+  "session_id": "sess_invalid_no_tool",
+  "model": {"raw": "gpt-5"},
+  "tool_definitions": [],
+  "messages": [
+    {"role": "user", "content": "帮我修复测试。"},
+    {"role": "assistant", "content": "可以，我建议先运行测试。"},
+    {"role": "user", "content": "继续。"},
+    {"role": "assistant", "content": "请检查失败用例。"}
+  ]
+}
