@@ -1,0 +1,21 @@
+{
+  "session_id": "sess_invalid_first_role",
+  "model": {"raw": "gemini-3-pro"},
+  "tool_definitions": [
+    {
+      "name": "run_tests",
+      "description": "Run the test suite.",
+      "parameters": {"type": "object", "properties": {"target": {"type": "string", "description": "Test target."}}}
+    }
+  ],
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "我将运行测试。",
+      "tool_calls": [{"id": "call_1", "type": "function", "function": {"name": "run_tests", "arguments": "{\"target\":\"all\"}"}}]
+    },
+    {"role": "tool", "tool_call_id": "call_1", "content": "passed"},
+    {"role": "user", "content": "请解释结果。"},
+    {"role": "assistant", "content": "测试通过。"}
+  ]
+}
